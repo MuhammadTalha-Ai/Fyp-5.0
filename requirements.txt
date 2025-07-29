@@ -1,10 +1,16 @@
-Django==4.2.21
-djangorestframework==3.16.0
-django-cors-headers==4.7.0
-gunicorn==22.0.0
-psycopg2-binary==2.9.9        # PostgreSQL (if you're using it)
-Pillow==10.3.0                # Image uploads
-numpy==2.0.2                  # Math/ML functionality
-requests==2.32.3              # HTTP requests
-tensorflow==2.19.0            # If you’re doing ML/DL
-openai==1.93.0                # If using OpenAI APIs
+Django>=4.2,<5.0
+gunicorn>=21.2.0
+django-cors-headers>=4.3.1
+python-dotenv>=1.0.1
+psycopg2-binary>=2.9.9  # if using PostgreSQL
+djangorestframework>=3.15.0
+numpy>=1.26.4
+pandas>=2.2.2
+scikit-learn>=1.4.2
+joblib>=1.4.2  # for model saving/loading
+matplotlib>=3.8.4  # if using any plots
+seaborn>=0.13.2  # optional
+xgboost>=2.0.3  # gradient boosting
+tensorflow>=2.16.1  # if using TensorFlow models
+torch>=2.3.0  # if using PyTorch models
+celery>=5.4.0
