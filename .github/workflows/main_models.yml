@@ -11,10 +11,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read #This is required for actions/checkout
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      # Add these cleanup steps before installing dependencies!
+      - name: Free up disk space (system and pip)
+        run: |
+          sudo apt-get clean
+          pip cache purge
+
+      # Now install dependencies
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ...rest of your workflow steps...
 
     steps:
       - uses: actions/checkout@v4
@@ -68,4 +81,5 @@ jobs:
         with:
           app-name: 'models'
           slot-name: 'Production'
+
           
