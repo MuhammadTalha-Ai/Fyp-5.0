@@ -12,6 +12,6 @@ matplotlib>=3.8.4  # if using any plots
 seaborn>=0.13.2  # optional
 xgboost>=2.0.3  # gradient boosting
 tensorflow>=2.16.1  # if using TensorFlow models
-torch>=2.3.0  # if using PyTorch models
+#torch>=2.3.0  # if using PyTorch models
 celery>=5.4.0
 whitenoise
