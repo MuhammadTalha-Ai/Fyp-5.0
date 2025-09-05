@@ -14,3 +14,4 @@ xgboost>=2.0.3  # gradient boosting
 tensorflow>=2.16.1  # if using TensorFlow models
 torch>=2.3.0  # if using PyTorch models
 celery>=5.4.0
+whitenoise
