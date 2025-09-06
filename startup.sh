@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "Collecting static files..."
 python manage.py collectstatic --noinput
 
-exec gunicorn --workers 3 --bind 0.0.0.0:$PORT fyp.wsgi:application
+echo "Starting gunicorn..."
+exec gunicorn --bind=0.0.0.0:${PORT:-8000} fyp.wsgi:application --log-level debug
