@@ -12,6 +12,6 @@ matplotlib>=3.8.4
 seaborn>=0.13.2
 xgboost>=2.0.3
 tensorflow>=2.16.1
-#torch>=2.3.0
+torch>=2.3.0
 celery>=5.4.0
 whitenoise>=6.6.0
